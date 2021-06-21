@@ -10,7 +10,7 @@ var phoneMask = IMask(
 
 let mobile = () => {
     if ($(window).width() <= 1023 && $('.hamburger').length === 0) {
-        $('.header').after('<div class="mobile-menu"><div class="list"></div><div class="hamburger"></div></div>');
+        $('.header .container').append('<div class="mobile-menu"><div class="list"></div><div class="hamburger"></div></div>');
         $('.mobile-menu .list').append($('.header__menu')).append($('.menu'));
     } else if ($(window).width() > 1023 && $('.hamburger').length > 0) {
         $('.header__logo').after($('.header__menu'));
@@ -25,7 +25,7 @@ $(window).on('resize', mobile);
 
 $('body').on('click', '.hamburger', (e) => {
     $(e.currentTarget).toggleClass('active');
-    $('.mobile-menu .list').slideToggle();
+    $('.mobile-menu .list').slideToggle(250);
 });
 
 if ($(window).width() > 1023) {
@@ -41,3 +41,5 @@ if ($(window).width() < 767) {
         dots: true
     });
 }
+
+$('.gallery__list .gallery__item:last').height($('.gallery__list .gallery__item:last').width())

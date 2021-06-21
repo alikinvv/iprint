@@ -372,6 +372,10 @@ a {
 			}
 		}
 
+		@include r(767) {
+			padding: 0 10px;
+		}
+
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -404,8 +408,10 @@ a {
 
 	&__phone {
 		@include r(767) {
-			font-size: 14px;
+			font-size: 12px;
 			text-align: right;
+			position: relative;
+			z-index: 2;
 		}
 
 		font-weight: bold;
@@ -468,8 +474,9 @@ a {
 	position: fixed;
 	left: 0;
 	right: 0;
-	margin-top: 5px;
-	z-index: 5;
+	margin-top: 97px;
+    transform: translateY(50%);
+	z-index: 1;
 
 	.list {
 		display: none;
@@ -501,16 +508,12 @@ a {
 	}
 
 	.hamburger {
-		@include r(767) {
-			bottom: 60px;
-		}
-
 		width: 69px;
 		height: 69px;
 		background: url('../img/icons/hamburger.svg') no-repeat center #fff;
 		background-size: 39px;
 		position: relative;
-		bottom: 70px;
+		bottom: 59px;
 		left: 50%;
 		transform: translateX(-50%);
 		transition: $trans;
