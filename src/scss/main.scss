@@ -1038,6 +1038,7 @@ a {
 .icons {
 	@include r(1023) {
 		margin-bottom: -30px;
+		padding-top: 60px;
 	}
 
 	padding: 84px 0 50px;
@@ -1128,14 +1129,39 @@ a {
 		}
 
 		text-align: center;
+		cursor: pointer;
 
-		img {
+		&:hover {
+			span {
+				color: $blue;
+			}
+
+			path[stroke="#131313"] {
+				stroke: $blue;
+			}
+
+			path[stroke="#1D1D1B"] {
+				stroke: $blue;
+			}
+
+			path[fill="#131313"] {
+				fill: $blue;
+			}
+		}
+
+		svg {
 			@include r(767) {
 				max-width: 100px;
+				margin-bottom: -20px;
 			}
 
 			pointer-events: none;
-			user-select: none
+			user-select: none;
+			transition: $trans;
+
+			path {
+				transition: $trans;
+			}
 		}
 
 		span {
@@ -1148,6 +1174,7 @@ a {
 			text-transform: uppercase;
 			display: block;
 			margin-top: 5px;
+			transition: $trans;
 		}
 	}
 }
@@ -1467,6 +1494,11 @@ a {
 	}
 	
 	&__list {
+		@include r(767) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
 		margin: 0 -15px -30px;
 		display: flex;
 		flex-wrap: wrap;
@@ -1502,7 +1534,7 @@ a {
 
 		&:last-child {
 			@include r(767) {
-				width: 162px;
+				width: calc(50% - 10px);
 				height: 162px;
 				padding: 0;
 			}
@@ -1741,6 +1773,8 @@ a {
 			z-index: 2;
 			margin: 0;
 			box-shadow: 0 0 20px $blue;
+			border-top: 1px solid #fff;
+			margin-right: -1px;
 		}
 
 		.btn {
@@ -1784,17 +1818,17 @@ a {
 			position: relative;
 			display: block;
 
-			&:hover {
-				transform: scale(1.1);
-			}
-
-			img {
-				@include r(1279) {
-					width: 35px;
-				}
-
+			svg {
 				box-shadow: 0 0 20px $blue;
 				border-radius: 50%;
+
+				path {
+					transition: $trans;
+				}
+
+				&:hover path {
+					fill: $yellow;
+				}
 			}
 		}
 	}
@@ -1988,7 +2022,7 @@ a {
 		position: absolute;
 		width: 230px;
 		height: 189px;
-		background: url('../img/wire.png') no-repeat center;
+		background: url('../img/wire2.png') no-repeat center;
 		background-size: contain;
 		top: 50%;
 		left: 50%;
@@ -2008,20 +2042,6 @@ a {
 		border-radius: 15px;
 		padding: 35px;
 		position: relative;
-
-		&::before {
-			@include r(1279) {
-				display: none;
-			}
-
-			content: '';
-			position: absolute;
-			right: -10px;
-			top: 308px;
-			background: url('../img/pr.png') no-repeat center;
-			width: 10px;
-			height: 33px;
-		}
 	}
 
 	.form-group {
@@ -2109,7 +2129,6 @@ a {
 			position: absolute;
 			left: -10px;
 			top: 133px;
-			background: url('../img/pld.png') no-repeat center;
 			width: 10px;
 			height: 33px;
 		}
