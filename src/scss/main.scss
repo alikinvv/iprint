@@ -477,9 +477,6 @@ a {
 	z-index: 1;
 	transition: $trans;
 
-	&.active {
-	}
-
 	.list {
 		display: none;
 		padding: 0 20px 20px;
@@ -2196,6 +2193,8 @@ a {
 					justify-content: space-between;
 					font-size: 12px;
 					margin-bottom: 10px;
+					text-transform: initial;
+					font-weight: normal;
 
 					&.s {
 						font-size: 10px;
