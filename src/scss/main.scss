@@ -14,7 +14,7 @@ $blue: #51C0FF;
 
 body {
 	@include r(1023) {
-		padding-top: 69px;
+		padding-top: 50px;
 	}
 
 	@include r(767) {
@@ -374,9 +374,6 @@ a {
 
 		@include r(767) {
 			padding: 0 10px;
-			position: relative;
-			z-index: 2;
-			background: #fff;
 		}
 
 		display: flex;
@@ -474,16 +471,13 @@ a {
 }
 
 .mobile-menu {
-	position: static;
+	position: relative;
 	left: 0;
 	right: 0;
-	margin-top: -66px;
 	z-index: 1;
 	transition: $trans;
 
 	&.active {
-		margin-top: 10px;
-		margin-bottom: -70px;
 	}
 
 	.list {
@@ -500,6 +494,7 @@ a {
 				box-shadow: none;
 				background: transparent;
 				border-radius: 0;
+				padding-bottom: 0;
 			}
 		}
 
@@ -519,8 +514,8 @@ a {
 		height: 69px;
 		background: url('../img/icons/hamburger.svg') no-repeat center #fff;
 		background-size: 39px;
-		position: relative;
-		bottom: -33px;
+		position: absolute;
+		bottom: -32px;
 		left: 50%;
 		transform: translateX(-50%);
 		transition: $trans;
@@ -528,8 +523,8 @@ a {
 		z-index: 12;
 
 		&.active {
-			transform: translateX(-50%) translateY(-50%) rotate(180deg);
-			bottom: 4px;
+			transform: translateX(-50%) rotate(180deg);
+			bottom: -34px;
 		}
 	}
 
