@@ -10,7 +10,7 @@ var phoneMask = IMask(
 
 let mobile = () => {
     if ($(window).width() <= 1023 && $('.hamburger').length === 0) {
-        $('.header .container').append('<div class="mobile-menu"><div class="list"></div><div class="hamburger"></div></div>');
+        $('.header').append('<div class="mobile-menu"><div class="list"></div><div class="hamburger"></div></div>');
         $('.mobile-menu .list').append($('.header__menu')).append($('.menu'));
     } else if ($(window).width() > 1023 && $('.hamburger').length > 0) {
         $('.header__logo').after($('.header__menu'));
@@ -25,6 +25,7 @@ $(window).on('resize', mobile);
 
 $('body').on('click', '.hamburger', (e) => {
     $(e.currentTarget).toggleClass('active');
+    $('.mobile-menu').toggleClass('active');
     $('.mobile-menu .list').slideToggle(250);
 });
 

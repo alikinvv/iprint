@@ -374,6 +374,9 @@ a {
 
 		@include r(767) {
 			padding: 0 10px;
+			position: relative;
+			z-index: 2;
+			background: #fff;
 		}
 
 		display: flex;
@@ -471,18 +474,22 @@ a {
 }
 
 .mobile-menu {
-	position: fixed;
+	position: static;
 	left: 0;
 	right: 0;
-	margin-top: 97px;
-    transform: translateY(50%);
+	margin-top: -66px;
 	z-index: 1;
+	transition: $trans;
+
+	&.active {
+		margin-top: 10px;
+		margin-bottom: -70px;
+	}
 
 	.list {
 		display: none;
 		padding: 0 20px 20px;
 		background: #fff;
-		transform: translateY(-23px);
 
 		.menu {
 			position: relative;
@@ -513,7 +520,7 @@ a {
 		background: url('../img/icons/hamburger.svg') no-repeat center #fff;
 		background-size: 39px;
 		position: relative;
-		bottom: 59px;
+		bottom: -33px;
 		left: 50%;
 		transform: translateX(-50%);
 		transition: $trans;
@@ -522,7 +529,7 @@ a {
 
 		&.active {
 			transform: translateX(-50%) translateY(-50%) rotate(180deg);
-			bottom: 20px;
+			bottom: 4px;
 		}
 	}
 
