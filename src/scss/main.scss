@@ -2163,7 +2163,8 @@ a {
 
 			.list {
 				box-shadow: 4px 9px 7px rgba(0, 0, 0, 0.25);
-				background: url('../img/check.png') repeat-x left bottom #FCFCFC;
+				background: url('../img/icons/check.svg') repeat-x left bottom #FCFCFC;
+				background-size: 5px;
 				width: 100%;
 				padding: 30px 14px;
 				transform: translateY(0);
