@@ -40,8 +40,6 @@
 </div>
 <!-- START CONTENT  -->
 
-<!-- <svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-search"></use></svg> -->
-
 <section class="main full business-card-printing" style="background-image: url('img/business-card-printing.jpg')">
 </section>
 
@@ -159,39 +157,39 @@
                 <form action="" class="pr">
                     <div class="form-group">
                         <span>Тип печати</span>
-                        <select name="format" id="">
-                            <option value="">Цифровая</option>
-                            <option value="">Офсетная</option>
+                        <select name="type" id="">
+                            <option value="cif">Цифровая</option>
+                            <option value="offset">Офсетная</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <span>Бумага</span>
-                        <select name="format" id="">
-                            <option value="">Глянцевая</option>
-                            <option value="">Матовая</option>
+                        <select name="paper" id="">
+                            <option value="gl">Глянцевая</option>
+                            <option value="mat">Матовая</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <span>Печать</span>
-                        <select name="format" id="">
-                            <option value="">4+0(Односторонние)</option>
-                            <option value="">4+4(Двухсторонние)</option>
+                        <select name="print" id="">
+                            <option value="0">4+0(Односторонние)</option>
+                            <option value="4">4+4(Двухсторонние)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <span>Тираж</span>
-                        <select name="format" id="">
-                            <option value="">48 шт.</option>
-                            <option value="">98 шт.</option>
-                            <option value="">200 шт.</option>
-                            <option value="">300 шт.</option>
-                            <option value="">400 шт.</option>
-                            <option value="">500 шт.</option>
-                            <option value="">600 шт.</option>
-                            <option value="">700 шт.</option>
-                            <option value="">800 шт.</option>
-                            <option value="">900 шт.</option>
-                            <option value="">1000 шт.</option>
+                        <select name="count" class="active" id="">
+                            <option value="48">48 шт.</option>
+                            <option value="98">98 шт.</option>
+                            <option value="200">200 шт.</option>
+                            <option value="300">300 шт.</option>
+                            <option value="400">400 шт.</option>
+                            <option value="500">500 шт.</option>
+                            <option value="600">600 шт.</option>
+                            <option value="700">700 шт.</option>
+                            <option value="800">800 шт.</option>
+                            <option value="900">900 шт.</option>
+                            <option value="1000">1000 шт.</option>
                         </select>
                     </div>
 
@@ -204,16 +202,11 @@
                         <div class="list">
                             <div class="check__title">Услуги печати чертежей:</div>
                             <ul>
-                                <li><span>Формат</span><span>А4</span></li>
-                                <li><span>Бумага</span><span>инженерная 80 г/м2</span></li>
-                                <li><span>Тип изображения</span><span>чертеж</span></li>
-                                <li><span>Цветность печати</span><span>ч/б</span></li>
-                                <li><span>Тираж</span><span>20</span></li>
                             </ul>
 
                             <div class="check__title">Итог:</div>
                             <ul>
-                                <li><span>100 руб.</span><span>(5&nbsp;руб/шт)</span></li>
+                                <li><span>(<span class="single">5</span>&nbsp;руб/шт)</span><span><span class="price">100</span> руб.</span></li>
                                 <li class="s"><span>Не&nbsp;является публичной офертой.</span><span></span></li>
                                 <li class="s"><span>Цены на&nbsp;сайте указаны для ознакомления и&nbsp;могут
                                 отличаться от&nbsp;действующих.</span><span></span></li>
@@ -270,6 +263,9 @@
         </div>
     </section>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/prices/business-card-printing.js"></script>
 
 <!-- END CONTENT  -->
 <footer class="footer">
@@ -348,7 +344,6 @@
     </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://unpkg.com/imask"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/jquery.sticky.js"></script>

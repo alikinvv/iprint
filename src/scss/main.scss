@@ -2167,9 +2167,14 @@ a {
 				background-size: 5px;
 				width: 100%;
 				padding: 30px 14px;
-				transform: translateY(0);
+				transform: translateY(-100%);
 				position: relative;
 				z-index: 2;
+				transition: all .4s ease-in-out;
+
+				&.active {
+					transform: translateY(0);
+				}
 			}
 
 			&__title {
@@ -2188,7 +2193,7 @@ a {
 				}
 
 				li {
-					border-bottom: 1px dashed #000000;
+					border-bottom: 1px solid #000000;
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
@@ -2199,6 +2204,7 @@ a {
 
 					&.s {
 						font-size: 10px;
+						border-bottom: 1px dashed #000000;
 					}
 
 					&:last-child {
@@ -2276,4 +2282,17 @@ section.top {
 			height: 6px;
 		}
 	}
+}
+
+.hide {
+	display: none !important;
+}
+
+input[name="count"] {
+	margin-bottom: 0 !important;
+	height: 30px;
+}
+
+select[disabled] {
+	background: #dadada;
 }

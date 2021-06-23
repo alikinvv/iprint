@@ -40,8 +40,6 @@
 </div>
 <!-- START CONTENT  -->
 
-<!-- <svg class="icon"><use xlink:href="img/symbol-defs.svg#icon-search"></use></svg> -->
-
 <section class="main full printing-drawings" style="background-image: url('img/printing-drawings.jpg')">
 </section>
 
@@ -150,50 +148,46 @@
             <div class="print">
                 <form action="" class="pr">
                     <div class="form-group">
+                      <span>Бумага</span>
+                      <select name="paper" id="">
+                          <option value="paper">Инженерная 80 г/м2</option>
+                          <option value="vatman">ВАТМАН 200 Г/М2.</option>
+                      </select>
+                  </div>
+                    <div class="form-group">
                         <span>Формат листа</span>
                         <select name="format" id="">
-                            <option value="">A4</option>
-                            <option value="">A3</option>
-                            <option value="">A2</option>
-                            <option value="">A1</option>
-                            <option value="">A0</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <span>Бумага</span>
-                        <select name="format" id="">
-                            <option value="">Инженерная 80 г/м2</option>
-                            <option value="">ВАТМАН 200 Г/М2.</option>
+                            <option value="a4">A4</option>
+                            <option value="a3">A3</option>
+                            <option value="a2">A2</option>
+                            <option value="a1">A1</option>
+                            <option value="a0">A0</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <span>Тип изображения</span>
-                        <select name="format" id="">
-                            <option value="">Чертеж</option>
-                            <option value="">Изображение</option>
+                        <select name="type" id="">
+                            <option value="drawing">Чертеж</option>
+                            <option value="image">Изображение</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <span>Цветность печати</span>
-                        <select name="format" id="">
-                            <option value="">ч/б</option>
-                            <option value="">ЦВЕТ</option>
+                        <select name="color" id="">
+                            <option value="black">ч/б</option>
+                            <option value="color">ЦВЕТ</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <span>Тираж</span>
-                        <select name="format" id="">
-                            <option value="">1</option>
-                            <option value="">10</option>
-                            <option value="">100</option>
-                        </select>
+                        <input type="text" name="count" value="1">
                     </div>
 
                     <div class="form-group">
                         <span>Фальцовка</span>
-                        <select name="format" id="">
-                            <option value="">Под формат А3</option>
-                            <option value="">Под формат А4</option>
+                        <select name="falc" disabled id="">
+                            <option value="false">Без фальцовки</option>
+                            <option value="true">под формат А4</option>
                         </select>
                     </div>
 
@@ -206,16 +200,11 @@
                         <div class="list">
                             <div class="check__title">Услуги печати чертежей:</div>
                             <ul>
-                                <li><span>Формат</span><span>А4</span></li>
-                                <li><span>Бумага</span><span>инженерная 80 г/м2</span></li>
-                                <li><span>Тип изображения</span><span>чертеж</span></li>
-                                <li><span>Цветность печати</span><span>ч/б</span></li>
-                                <li><span>Тираж</span><span>20</span></li>
                             </ul>
 
                             <div class="check__title">Итог:</div>
                             <ul>
-                                <li><span>100 руб.</span><span>(5&nbsp;руб/шт)</span></li>
+                              <li><span>(<span class="single">5</span>&nbsp;руб/шт)</span><span><span class="price">100</span> руб.</span></li>
                                 <li class="s"><span>Не&nbsp;является публичной офертой.</span><span></span></li>
                                 <li class="s"><span>Цены на&nbsp;сайте указаны для ознакомления и&nbsp;могут
                                 отличаться от&nbsp;действующих.</span><span></span></li>
@@ -277,6 +266,9 @@
         </div>
     </section>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/prices/printing-drawings.js"></script>
 
 <!-- END CONTENT  -->
 <footer class="footer">
@@ -355,7 +347,6 @@
     </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://unpkg.com/imask"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/jquery.sticky.js"></script>
