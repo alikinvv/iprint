@@ -455,6 +455,18 @@ a {
 			box-shadow: none;
 			background: #fff;
 		}
+
+		& > div {
+			position: relative;
+
+			&:hover {
+				.submenu {
+					opacity: 1;
+					transform: translateX(-50%) translateY(100%);
+					pointer-events: all;
+				}
+			}
+		}
 	}
 
 	a {
@@ -463,11 +475,41 @@ a {
 		text-transform: uppercase;
 		font-weight: bold;
 		transition: $trans;
+		position: relative;
 
 		&:hover {
 			color: $blue;
 		}
 	}
+
+	.submenu {
+		@include r(1023) {
+			display: none !important;
+		}
+		
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%) translateY(105%);
+		bottom: 5px;
+		text-align: center;
+		background: #fff;
+		border-radius: 20px;
+		padding: 20px;
+		opacity: 0;
+		transition: $trans;
+		user-select: none;
+		pointer-events: none;
+
+		a {
+			display: block;
+			white-space: nowrap;
+			margin-bottom: 5px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}	
 }
 
 .mobile-menu {
@@ -2236,6 +2278,7 @@ section.top {
 .is-sticky {
 	position: relative;
 	z-index: 10;
+
 	.menu {
 		margin-top: 20px;
 	}
