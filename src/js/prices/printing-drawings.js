@@ -296,12 +296,12 @@ let math = () => {
 
     if ($('[name="paper"]').val() === 'vatman') {
         single = vatman[typeVal][formatVal][colorVal] + falcCount;
-        price = (vatman[typeVal][formatVal][colorVal] + falcCount) * countVal;
+        price = (vatman[typeVal][formatVal][colorVal] * countVal) + falcCount;
     }
 
     if ($('[name="paper"]').val() === 'paper') {
         single = paper[countSelector][typeVal][formatVal][colorVal] + falcCount;
-        price = (paper[countSelector][typeVal][formatVal][colorVal] + falcCount) * countVal;
+        price = (paper[countSelector][typeVal][formatVal][colorVal] * countVal) + falcCount;
     }
 
     $('.single').text(single);
