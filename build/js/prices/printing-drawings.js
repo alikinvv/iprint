@@ -291,17 +291,17 @@ let math = () => {
     let falcCount = 0;
 
     if ($('[name="falc"]').val() === 'true') {
-        falcCount = falc[formatVal] * countVal;
+        falcCount = falc[formatVal];
     }
 
     if ($('[name="paper"]').val() === 'vatman') {
         single = vatman[typeVal][formatVal][colorVal] + falcCount;
-        price = (vatman[typeVal][formatVal][colorVal] * countVal) + falcCount;
+        price = (vatman[typeVal][formatVal][colorVal] * countVal) + (falcCount * countVal);
     }
 
     if ($('[name="paper"]').val() === 'paper') {
         single = paper[countSelector][typeVal][formatVal][colorVal] + falcCount;
-        price = (paper[countSelector][typeVal][formatVal][colorVal] * countVal) + falcCount;
+        price = (paper[countSelector][typeVal][formatVal][colorVal] * countVal) + (falcCount * countVal);
     }
 
     $('.single').text(single);

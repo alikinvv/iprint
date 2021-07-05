@@ -126,6 +126,7 @@ table {
 			padding: 10px;
 			font-size: 14px;
 			transition: $trans;
+			text-transform: uppercase;
 
 			&:hover {
 				background: $yellow;
